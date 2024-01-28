@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  sshserver:
+    container_name: sshserver
+    build:
+      dockerfile: ./Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./:/mount/
+    ports:
+      - "20021:20022"
